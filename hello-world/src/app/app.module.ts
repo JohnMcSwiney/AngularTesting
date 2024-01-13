@@ -1,5 +1,4 @@
 // app.module.ts
-// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -12,14 +11,14 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+     
     HeaderComponent,
     TasksComponent,
     ButtonComponent,
     TaskItemComponent
   ],
   imports: [BrowserModule,FontAwesomeModule],
-  bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
 
