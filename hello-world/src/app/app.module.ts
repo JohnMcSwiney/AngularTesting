@@ -1,5 +1,5 @@
 // app.module.ts
-import { NgModule } from '@angular/core';
+import { DoBootstrap, NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -18,9 +18,13 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     TaskItemComponent
   ],
   imports: [BrowserModule,FontAwesomeModule],
-  
+  exports:[HeaderComponent, TasksComponent, ButtonComponent, TaskItemComponent]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap{
+  ngDoBootstrap(appRef: ApplicationRef): void {
+    appRef.bootstrap(AppComponent);
+  }
+ }
 
 
 
